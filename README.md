@@ -86,7 +86,7 @@ Al tocar uno se abre el reproductor, con la onda de audio, el título, la voz, l
 
 ## 🗂️ Estructura del proyecto
 
-> Esta es una versión pública del proyecto: sin claves, sin configuración de mis servicios y sin la carpeta de base de datos.
+> Esta es una versión pública del proyecto. Por seguridad no incluye los archivos con claves y configuración de mis servicios (`lib/firebase.ts`, `eas.json`, `.env`) ni la carpeta `supabase/`.
 
 ```
 INSPIRAPP
@@ -127,9 +127,10 @@ La app usa dev client, así que **no funciona en Expo Go** (el login con Google 
 
 ```bash
 npm install
-cp .env.example .env     # completa tus propias claves
 npx expo run:android
 ```
+
+Crea tu propio `lib/firebase.ts` con la configuración de tu proyecto de Firebase y un `.env` con `EXPO_PUBLIC_SUPABASE_URL`, `EXPO_PUBLIC_SUPABASE_ANON_KEY` y `EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID`.
 
 ---
 
