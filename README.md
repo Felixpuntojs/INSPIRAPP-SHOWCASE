@@ -86,7 +86,7 @@ Al tocar uno se abre el reproductor, con la onda de audio, el título, la voz, l
 
 ## 🗂️ Estructura del proyecto
 
-> El código fuente vive en un repositorio privado. Aquí dejo la estructura para que se vea cómo está organizada.
+> Esta es una versión pública del proyecto: sin claves, sin configuración de mis servicios y sin la carpeta de base de datos.
 
 ```
 INSPIRAPP
@@ -119,6 +119,16 @@ INSPIRAPP
 │   └── notifications.ts          Permisos y recordatorio diario
 ├── supabase/                     Esquema, datos iniciales y políticas de storage
 └── LOGOS/                        Icono, logo y splash
+```
+
+## 🚀 Cómo correrla
+
+La app usa dev client, así que **no funciona en Expo Go** (el login con Google es nativo). Para probarla necesitas tus propios proyectos de Firebase y Supabase.
+
+```bash
+npm install
+cp .env.example .env     # completa tus propias claves
+npx expo run:android
 ```
 
 ---
